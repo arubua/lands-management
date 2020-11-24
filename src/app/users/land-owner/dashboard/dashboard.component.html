@@ -1,0 +1,122 @@
+<div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
+    <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+
+        <!-- begin:: Content Head -->
+        <div class="kt-subheader   kt-grid__item" id="kt_subheader">
+            <div class="kt-container ">
+                <div class="kt-subheader__main">
+                    <h3 class="kt-subheader__title">Dashboard</h3>
+                </div>
+                <div class="kt-subheader__toolbar">
+                    <div class="kt-subheader__wrapper">
+                        <a href="#" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="Select dashboard daterange" data-placement="left">
+                            <fa-icon [icon]="faCalendarAlt"></fa-icon>&nbsp;
+                            <span class="kt-subheader__btn-daterange-title" id="kt_dashboard_daterangepicker_title"> Today</span>&nbsp;
+                            <span class="kt-subheader__btn-daterange-date" id="kt_dashboard_daterangepicker_date">{{globals.today |date:'medium'}}</span>
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+
+            <!--Begin::Dashboard 2-->
+
+            <!--Begin::Row-->
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <!--begin:: Widgets/Applications/User/Profile1-->
+									<div class="kt-portlet kt-portlet--height-fluid">
+										<div class="kt-portlet__head  kt-portlet__head--noborder">
+											<div class="kt-portlet__head-label">
+												<h3 class="kt-portlet__head-title">Profile Information
+												</h3>
+											</div>
+											
+										</div>
+										<div class="kt-portlet__body kt-portlet__body--fit-y">
+
+											<!--begin::Widget -->
+											<div *ngIf="globals.currentUser" class="kt-widget kt-widget--user-profile-1">
+												<div class="kt-widget__head">
+													<div class="kt-widget__media">
+														<img src="{{globals.currentUser.pic}}" alt="image">
+													</div>
+													<div class="kt-widget__content">
+														<div class="kt-widget__section">
+															<a href="#" class="kt-widget__username">
+																{{globals.currentUser.fullName}}
+																<i class="flaticon2-correct kt-font-success"></i>
+															</a>
+															<span *ngFor="let role of Roles" class="kt-widget__subtitle">
+																{{role}}
+															</span>
+														</div>
+														
+													</div>
+												</div>
+												<div class="kt-widget__body">
+													<div class="kt-widget__content">
+														<div class="kt-widget__info">
+															<span class="kt-widget__label">Email:</span>
+															<a href="#" class="kt-widget__data">{{globals.currentUser.email}}</a>
+														</div>
+														<div class="kt-widget__info">
+															<span class="kt-widget__label">Phone:</span>
+															<a href="#" class="kt-widget__data">{{globals.currentUser.phoneNumber}}</a>
+														</div>
+														<div class="kt-widget__info">
+															<span class="kt-widget__label">Location:</span>
+															<span class="kt-widget__data">{{globals.currentUser.address.county}}</span>
+                                                        </div>
+                                                        <div class="kt-widget__info">
+															<span class="kt-widget__label">ID Number:</span>
+															<span class="kt-widget__data">{{globals.currentUser.idNumber}}</span>
+                                                        </div>
+                                                        <div class="kt-widget__info">
+															<span class="kt-widget__label">Mailbox:</span>
+															<span class="kt-widget__data">{{globals.currentUser.address.mailbox}}</span>
+                                                        </div>
+                                                        
+													</div>
+													<div class="kt-widget__items">
+													</div>
+												</div>
+											</div>
+
+											<!--end::Widget -->
+										</div>
+									</div>
+									<!--end:: Widgets/Applications/User/Profile1-->
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <!--begin:: Widgets/LastSeen-->
+                    <div class="kt-portlet kt-portlet--height-fluid">
+                        <div class="kt-widget14">
+                            <div class="kt-widget14__header">
+                                <h3 class="kt-widget14__title">
+                                    Last Seen
+                                </h3>
+                                <span class="kt-widget14__desc">
+                                    Current User last seen
+                                </span>
+                            </div>
+                            <div class="kt-widget14__content">
+                                <div class="kt-widget-date">
+                                    <div class="kt-date">{{globals.currentUser.lastSeenOn | date:'medium'}}</div>
+                                    
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <!--end:: Widgets/Last Seen-->
+                </div>
+    
+            </div>
+        </div>
+
+    </div>
+</div>

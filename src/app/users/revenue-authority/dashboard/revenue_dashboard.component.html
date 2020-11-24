@@ -1,0 +1,264 @@
+<div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
+    <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+
+        <!-- begin:: Content Head -->
+        <div class="kt-subheader   kt-grid__item" id="kt_subheader">
+            <div class="kt-container ">
+                <div class="kt-subheader__main">
+                    <h3 class="kt-subheader__title">Dashboard</h3>
+                </div>
+                <div class="kt-subheader__toolbar">
+                    <div class="kt-subheader__wrapper">
+                        <a href="#" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="Select dashboard daterange" data-placement="left">
+                            <fa-icon [icon]="faCalendarAlt"></fa-icon>&nbsp;
+                            <span class="kt-subheader__btn-daterange-title" id="kt_dashboard_daterangepicker_title"> Today</span>&nbsp;
+                            <span class="kt-subheader__btn-daterange-date" id="kt_dashboard_daterangepicker_date"> {{globals.today |date:'medium'}}</span>
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12">
+                    <!--begin:: Widgets/Stats-->
+							<div class="kt-portlet">
+								<div class="kt-portlet__body  kt-portlet__body--fit">
+									<div class="row row-no-padding row-col-separator-xl">
+										<div class="col-md-12 col-lg-6 col-xl-3">
+
+											<!--begin::Total Land reviews-->
+											<div class="kt-widget24">
+												<div class="kt-widget24__details">
+													<div class="kt-widget24__info">
+														<h4 class="kt-widget24__title">
+															Total Reviews
+														</h4>
+														<span class="kt-widget24__desc">
+															All transfer review requests
+														</span>
+													</div>
+													<span class="kt-widget24__stats kt-font-brand">
+														11K
+													</span>
+												</div>
+												<div class="progress progress--sm">
+													<div class="progress-bar kt-bg-brand" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="kt-widget24__action">
+													<span class="kt-widget24__change">
+														% per requests
+													</span>
+													<span class="kt-widget24__number">
+														90%
+													</span>
+												</div>
+											</div>
+
+											<!--end::Total Land reviews-->
+										</div>
+										<div class="col-md-12 col-lg-6 col-xl-3">
+
+											<!--begin::Pending Reviews-->
+											<div class="kt-widget24">
+												<div class="kt-widget24__details">
+													<div class="kt-widget24__info">
+														<h4 class="kt-widget24__title">
+															Pending 
+														</h4>
+														<span class="kt-widget24__desc">
+															Pending transfer reviews
+														</span>
+													</div>
+													<span class="kt-widget24__stats kt-font-warning">
+														1349
+													</span>
+												</div>
+												<div class="progress progress--sm">
+													<div class="progress-bar kt-bg-warning" role="progressbar" style="width: 24%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="kt-widget24__action">
+													<span class="kt-widget24__change">
+														% per requests
+													</span>
+													<span class="kt-widget24__number">
+														24%
+													</span>
+												</div>
+											</div>
+
+											<!--end::New Feedbacks-->
+										</div>
+										<div class="col-md-12 col-lg-6 col-xl-3">
+
+											<!--begin::New Orders-->
+											<div class="kt-widget24">
+												<div class="kt-widget24__details">
+													<div class="kt-widget24__info">
+														<h4 class="kt-widget24__title">
+															Declined
+														</h4>
+														<span class="kt-widget24__desc">
+															Declined land transfers
+														</span>
+													</div>
+													<span class="kt-widget24__stats kt-font-danger">
+														567
+													</span>
+												</div>
+												<div class="progress progress--sm">
+													<div class="progress-bar kt-bg-danger" role="progressbar" style="width: 19%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="kt-widget24__action">
+													<span class="kt-widget24__change">
+														% per requests
+													</span>
+													<span class="kt-widget24__number">
+														19%
+													</span>
+												</div>
+											</div>
+
+											<!--end::New Orders-->
+										</div>
+										<div class="col-md-12 col-lg-6 col-xl-3">
+
+											<!--begin::New Users-->
+											<div class="kt-widget24">
+												<div class="kt-widget24__details">
+													<div class="kt-widget24__info">
+														<h4 class="kt-widget24__title">
+															Approved
+														</h4>
+														<span class="kt-widget24__desc">
+															Approved transfer requests
+														</span>
+													</div>
+													<span class="kt-widget24__stats kt-font-success">
+														9276
+													</span>
+												</div>
+												<div class="progress progress--sm">
+													<div class="progress-bar kt-bg-success" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<div class="kt-widget24__action">
+													<span class="kt-widget24__change">
+														% per requests
+													</span>
+													<span class="kt-widget24__number">
+														80%
+													</span>
+												</div>
+											</div>
+
+											<!--end::New Users-->
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--end:: Widgets/Stats-->
+                </div>
+            </div>
+
+            <!--Begin::Row-->
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <!--begin:: Widgets/Applications/User/Profile1-->
+					<div class="kt-portlet kt-portlet--height-fluid">
+                        <div class="kt-widget14">
+                            <div class="kt-widget14__header">
+                                <h3 class="kt-widget14__title">Profile Information
+                                </h3>
+                                <span class="kt-widget14__desc">
+                                   User Profile Information
+                                </span>
+                            </div>
+                            
+                        </div>
+                        <div class="kt-portlet__body kt-portlet__body--fit-y">
+
+                            <!--begin::Widget -->
+                            <div *ngIf="globals.currentUser" class="kt-widget kt-widget--user-profile-1">
+                                <div class="kt-widget__head">
+                                    <div class="kt-widget__media">
+                                        <img src="{{globals.currentUser.pic}}" alt="image">
+                                    </div>
+                                    <div class="kt-widget__content">
+                                        <div class="kt-widget__section">
+                                            <a href="#" class="kt-widget__username">
+                                                {{globals.currentUser.fullName}}
+                                                <i class="flaticon2-correct kt-font-success"></i>
+                                            </a>
+                                            <span *ngFor="let role of Roles" class="kt-widget__subtitle">
+                                                {{role}}
+                                            </span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="kt-widget__body">
+                                    <div class="kt-widget__content">
+                                        <div class="kt-widget__info">
+                                            <span class="kt-widget__label">Email:</span>
+                                            <a href="#" class="kt-widget__data">{{globals.currentUser.email}}</a>
+                                        </div>
+                                        <div class="kt-widget__info">
+                                            <span class="kt-widget__label">Phone:</span>
+                                            <a href="#" class="kt-widget__data">{{globals.currentUser.phoneNumber}}</a>
+                                        </div>
+                                        <div class="kt-widget__info">
+                                            <span class="kt-widget__label">Location:</span>
+                                            <span class="kt-widget__data">{{globals.currentUser.address.county}}</span>
+                                        </div>
+                                        <div class="kt-widget__info">
+                                            <span class="kt-widget__label">ID Number:</span>
+                                            <span class="kt-widget__data">{{globals.currentUser.idNumber}}</span>
+                                        </div>
+                                        <div class="kt-widget__info">
+                                            <span class="kt-widget__label">Mailbox:</span>
+                                            <span class="kt-widget__data">{{globals.currentUser.address.mailbox}}</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="kt-widget__items">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--end::Widget -->
+                        </div>
+                    </div>
+									<!--end:: Widgets/Applications/User/Profile1-->
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <!--begin:: Widgets/LastSeen-->
+                    <div class="kt-portlet kt-portlet--height-fluid">
+                        <div class="kt-widget14">
+                            <div class="kt-widget14__header">
+                                <h3 class="kt-widget14__title">
+                                    Last Seen
+                                </h3>
+                                <span class="kt-widget14__desc">
+                                    Current User last seen
+                                </span>
+                            </div>
+                            <div class="kt-widget14__content">
+                                <div class="kt-widget-date">
+                                    <div class="kt-date">{{globals.currentUser.lastSeenOn | date:'medium'}}</div>
+                                    
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <!--end:: Widgets/Last Seen-->
+                </div>
+    
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,43 @@
+.kt-widget__info {
+    padding-top: .7rem;
+}
+.kt-date{
+    font-size: x-large;
+    color:#1dc9b7 ;
+    font-weight: bold;
+}
+.total-num{
+    font-size: x-large;
+    color:#007bff ;
+    font-weight: bold;
+}
+.active-num{
+    font-size: x-large;
+    color: #1dc9b7 ;
+    font-weight: bold;
+}
+.offline-num{
+    font-size: x-large;
+    color:#e1e1ef ;
+    font-weight: bold;
+}
+.user-status{
+    padding: 2%;
+    width: 100%;
+    text-align: center;
+    font-weight: lighter;
+    font-size: larger;
+}
+td:nth-child(1){
+    color: #007bff;
+    font-size: xx-large;
+}
+td:nth-child(2){
+    color: #1dc9b7;
+    font-size: xx-large;
+    
+}
+td:nth-child(3){
+    color:#e1e1ef ;
+    font-size: xx-large;
+}

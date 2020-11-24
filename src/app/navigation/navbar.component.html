@@ -1,0 +1,49 @@
+<!-- begin:: Header Mobile -->
+<div *ngIf="globals.currentUser" id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+  <div class="kt-header-mobile__logo">
+      <a href="#">
+          <img alt="Logo" src="./assets/media/logos/logo-2-sm.png" />
+      </a>
+  </div>
+  <div class="kt-header-mobile__toolbar">
+      <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
+      <button class="kt-header-mobile__toolbar-topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more-1"></i></button>
+  </div>
+</div>
+<!-- end:: Header Mobile -->
+
+<div class="kt-grid kt-grid--hor kt-grid--root">
+<!-- <div *ngIf="globals.currentUser" class="kt-grid kt-grid--hor kt-grid--root"> -->
+  <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+    <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<!-- begin::Scrolltop -->
+<div id="kt_scrolltop" class="kt-scrolltop">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<!-- <router-outlet></router-outlet> -->
+ <!-- begin:: Footer -->
+ <div *ngIf="globals.currentUser" class="kt-footer kt-footer--extended  kt-grid__item lm-footer" id="kt_footer">
+    <div class="kt-footer__bottom">
+        <div class="kt-container ">
+            <div class="kt-footer__wrapper">
+                <div class="kt-footer__logo">
+                    <a href="#">
+                        <img alt="Logo" src="./assets/media/logos/logo-2-sm.png">
+                    </a>
+                    <div class="kt-footer__copyright">
+                        {{globals.currentYear}}&nbsp;&copy;&nbsp;
+                        <a href="#" target="_blank">Team 143</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end:: Footer -->
+
+ 
+    

@@ -1,0 +1,113 @@
+.kt-portlet-dark{
+    margin-top: 2rem;
+}
+.lm-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .lm-card{
+      width: 20%;
+      min-width: 200px;
+  }
+ /* .box1::before {
+    position: absolute;
+    font-family: "FontAwesome";
+    font-size: 10rem;
+    top: .5%;
+    left: 5%;
+    color: rgba(255,255,255,.5);
+    content: "\f085";
+    background-size: cover;
+  } */
+  .lm-container .lm-card {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .lm-container .lm-card .box {
+    
+    height: 200px;
+    transition: 0.5s;
+  }
+  
+  .lm-container .lm-card .box.box1 {
+    position: relative;
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+  
+  .lm-container .lm-card:hover .box.box1 {
+    background: #007bff;
+    transform: translateY(0);
+  }
+  
+  .lm-container .lm-card .box.box1 .content {
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .lm-container .lm-card:hover .box.box1 .content h3 {
+    opacity: 1;
+    color: #fff;
+  }
+  
+  .lm-container .lm-card .box.box1 .content img {
+    max-width: 100px;
+  }
+  
+  .lm-container .lm-card .box.box1 .content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #007bff;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  
+  .lm-container  .lm-card .box.box2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+   
+    transform: translateY(-100px);
+  }
+  
+  .lm-container  .lm-card:hover .box.box2 {
+    transform: translateY(0);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .lm-container   .lm-card .box.box2 .content p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .lm-container   .lm-card .box.box2 .content a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #007bff;
+    padding: 5%;
+    border: 1px solid #007bff;
+  }
+  
+  .lm-container  .lm-card .box.box2 .content a:hover {
+    background: #007bff;
+    color: #fff;
+    padding: 5.5% 12% 5.5% 0;
+    font-size: larger;
+    transition: padding .4s ease-in-out;
+  }
+  

@@ -1,0 +1,101 @@
+<!--begin::Portlet-->
+<div class="kt-portlet">
+    <div class="kt-portlet__head">
+        <div class="kt-portlet__head-label">
+            <h3 class="kt-portlet__head-title">
+                Add New User
+            </h3>
+        </div>
+    </div>
+
+    <!--begin::Form-->
+    <form [formGroup]="newUserForm" (ngSubmit)="save(newUserForm.value)" class="kt-form kt-form--label-right">
+        <div class="kt-portlet__body">
+            <div class="form-group row">
+                <div class="col-lg-4">
+                    <label>Full Name:</label>
+                    <input type="email" class="form-control" placeholder="Enter full name" 
+                    formControlName="fullName" [ngClass]="{'is-invalid': submitted && f.fullName.errors} " />
+                    <div *ngIf="submitted && f.fullName.errors" class="invalid-feedback">
+                        <div *ngIf="f.fullName.errors.required">Full Name is required</div>
+                    </div>
+                    <span class="form-text text-muted">Please enter the full name</span>
+                </div>
+                <div class="col-lg-4">
+                    <label class="">Email:</label>
+                    <input type="email" class="form-control" placeholder="Enter email" 
+                    formControlName="email" [ngClass]="{'is-invalid': submitted && f.email.errors} " />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                    </div>
+                    <span class="form-text text-muted">Please enter email</span>
+                </div>
+                <div class="col-lg-4">
+                    <label>Username:</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend"><span class="input-group-text"><fa-icon [icon]="faUser"></fa-icon></span></div>
+                        <input type="text" class="form-control" placeholder="" 
+                        formControlName="username" [ngClass]="{'is-invalid': submitted && f.username.errors} " />
+                        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                            <div *ngIf="f.username.errors.required">Username is required</div>
+                        </div>
+                    </div>
+                    <span class="form-text text-muted">Please enter username</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-4">
+                    <label class="">Password:</label>
+                    <input type="password" class="form-control" placeholder="Generate" 
+                    formControlName="password" [ngClass]="{'is-invalid': submitted && f.password.errors} " />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                    </div>
+                    <span class="form-text text-muted">Click on the input field to generate</span>
+                </div>
+                <div class="col-lg-6">
+                    <label class="">Notification:</label>
+                    <div class="kt-checkbox-inline">
+                        <label class="kt-checkbox">
+                            <input type="checkbox" formControlName="notification"> Send User an email notification about the new account 
+                            <span></span>
+                        </label>
+                       <span class="form-text text-muted">Send notification</span>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-4 form-group">
+                    <label for="role">Select User Group(s)</label>
+                    <select multiple="" class="form-control" formControlName="role" [ngClass]="{'is-invalid': submitted && f.role.errors} " > 
+                        <option>Administrator</option>
+                        <option>Land Registrar</option>
+                        <option>Revenue Agent</option>
+                        <option>Land Owner</option>
+                    </select>
+                    <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+                        <div *ngIf="f.role.errors.required">Select atleast One role</div>
+                    </div>
+                    <span class="form-text text-muted">Please select user group</span>
+                </div>
+            </div>
+        </div>
+        <div class="kt-portlet__foot">
+            <div class="kt-form__actions">
+                <div class="row">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-8">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!--end::Form-->
+</div>
+
+<!--end::Portlet-->
